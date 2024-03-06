@@ -1,3 +1,6 @@
+import './ui/global.css';
+import Navbar from './Navbar/Navbar';
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+        <body>
+            <header>
+                <Navbar/>
+            </header>
+            <main>
+                {children}
+            </main>
+        </body>
     </html>
   );
 }
